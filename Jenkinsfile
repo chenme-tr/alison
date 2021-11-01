@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'DockerFile', defaultValue: 'Dockerfiletmp', description: 'blablabla')
+        string(name: 'DockerFile', defaultValue: 'Dockerfiletemp', description: 'blablabla')
     }
     stages {
         stage('Build') {
