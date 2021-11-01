@@ -14,10 +14,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh '''echo \'building docker image\'
+                sh ''' echo \'building docker image\'
                 echo ${params.Dockerfile}
-                sudo docker build -t alison . -f ${params.Dockerfile}
-                '''
+                sudo docker build -t alison . -f ${params.Dockerfile} '''
             }
         }
         stage('Artifact Push') {
